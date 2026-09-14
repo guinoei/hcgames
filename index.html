@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HC GAMES — Suporte Técnico</title>
+<meta name="description" content="HC GAMES suporte técnico — limpeza de console e PC, montagem e upgrade de PC, compra/venda de gear usado, reparo de drift em controle." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0a0a0a',
+          bone: '#eeeadd',
+          hc: {
+            blue: '#0047FF',
+            red: '#FF1F3D',
+          },
+        },
+        fontFamily: {
+          display: ['Anton', 'sans-serif'],
+          body: ['Archivo', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-ink text-bone font-body antialiased selection:bg-hc-red selection:text-ink">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-b border-bone/10">
+  <div class="hud-corners max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 group">
+      <img src="assets/logo1.png" alt="HC GAMES" class="h-10 w-auto" />
+      <span class="hidden sm:block font-display text-lg tracking-wide">HC <span class="text-hc-blue">GAMES</span></span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 font-display text-sm tracking-widest uppercase">
+      <a href="#services" class="nav-link">Serviços</a>
+      <a href="#about" class="nav-link">Sobre</a>
+      <a href="#gallery" class="nav-link">Galeria</a>
+      <a href="#contact" class="nav-link">Contato</a>
+    </nav>
+
+    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-2 px-4 py-2 border border-hc-blue text-hc-blue font-display text-xs tracking-widest uppercase hover:bg-hc-blue hover:text-ink transition-colors">
+      Solicitar Suporte
+    </a>
+
+    <button id="menuBtn" aria-label="Abrir menu" class="md:hidden text-bone">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-bone/10 bg-ink">
+    <nav class="flex flex-col px-5 py-4 gap-4 font-display text-sm tracking-widest uppercase">
+      <a href="#services" class="nav-link">Serviços</a>
+      <a href="#about" class="nav-link">Sobre</a>
+      <a href="#gallery" class="nav-link">Galeria</a>
+      <a href="#contact" class="nav-link">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="relative overflow-hidden min-h-screen flex items-center pt-16">
+    <div class="crosshair absolute top-24 left-6 md:left-16 opacity-60"></div>
+    <div class="crosshair absolute bottom-16 right-6 md:right-16 opacity-60"></div>
+    <div class="scanlines absolute inset-0 pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 md:px-8 py-20 grid md:grid-cols-2 gap-12 items-center w-full">
+      <div>
+        <p class="font-display text-hc-red tracking-[0.3em] text-xs md:text-sm mb-4 uppercase">— Suporte Técnico para Console e PC —</p>
+        <h1 class="glitch font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] uppercase" data-text="Equipamento Quebrado? A Gente Resolve.">
+          Equipamento Quebrado?<br />A Gente Resolve.
+        </h1>
+        <p class="mt-6 text-bone/70 max-w-md text-base md:text-lg">
+          Limpeza, montagem, upgrades, reparo de drift e o point de compra/venda dos seus consoles, PCs e gear gamer. Sem enrolação, só resolvido.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="px-6 py-3 bg-hc-blue text-ink font-display uppercase tracking-widest text-sm hover:bg-bone transition-colors">
+            Agendar Reparo
+          </a>
+          <a href="#services" class="px-6 py-3 border border-bone/30 font-display uppercase tracking-widest text-sm hover:border-bone transition-colors">
+            Ver Serviços
+          </a>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center md:justify-end">
+        <div class="hud-frame">
+          <img src="assets/logo1.png" alt="HC GAMES logo" class="w-64 sm:w-80 lg:w-96 h-auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="relative border-t border-bone/10 py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
+        <h2 class="glitch font-display text-4xl md:text-5xl uppercase" data-text="O Que Fazemos">O Que Fazemos</h2>
+        <p class="font-display text-hc-blue tracking-[0.3em] text-xs uppercase">— 01 / Serviços —</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-bone/10">
+        <!-- Card -->
+        <div class="service-card">
+          <span class="font-display text-hc-red text-sm">01</span>
+          <h3 class="font-display text-xl uppercase mt-3">Limpeza de Console e PC</h3>
+          <p class="mt-3 text-sm text-bone/60">Remoção de poeira, troca de pasta térmica e limpeza profunda pra acabar com o throttling e o barulho do cooler.</p>
+        </div>
+        <div class="service-card">
+          <span class="font-display text-hc-red text-sm">02</span>
+          <h3 class="font-display text-xl uppercase mt-3">Montagem e Upgrade</h3>
+          <p class="mt-3 text-sm text-bone/60">Montagem de PC personalizado e upgrade de peças — GPU, RAM, armazenamento — feito direito, sem gambiarra.</p>
+        </div>
+        <div class="service-card">
+          <span class="font-display text-hc-red text-sm">03</span>
+          <h3 class="font-display text-xl uppercase mt-3">Compra e Venda de Usados</h3>
+          <p class="mt-3 text-sm text-bone/60">Troque ou adquira consoles, PCs e dispositivos gamer usados, revisados e prontos pra usar.</p>
+        </div>
+        <div class="service-card">
+          <span class="font-display text-hc-red text-sm">04</span>
+          <h3 class="font-display text-xl uppercase mt-3">Reparo de Controle</h3>
+          <p class="mt-3 text-sm text-bone/60">Drift no analógico, botões gastos, gatilhos travados — suporte de controle pra voltar pro jogo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="relative border-t border-bone/10 py-24 bg-bone/[0.02]">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="font-display text-hc-blue tracking-[0.3em] text-xs uppercase mb-4">— 02 / Sobre —</p>
+        <h2 class="glitch font-display text-4xl md:text-5xl uppercase mb-6" data-text="Hardcore Em Cada Hardware.">Hardcore Em Cada Hardware.</h2>
+        <p class="text-bone/70 max-w-lg">
+          HC GAMES é uma equipe de suporte técnico feita para gamers, por gente que não terceiriza o diagnóstico. Simples assim: você conta o que quebrou, a gente fala a verdade, e resolve — console, PC ou periférico.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-px bg-bone/10">
+        <div class="stat-card">
+          <p class="font-display text-4xl text-hc-blue">100%</p>
+          <p class="text-xs uppercase tracking-widest text-bone/50 mt-2">Diagnóstico Antes do Orçamento</p>
+        </div>
+        <div class="stat-card">
+          <p class="font-display text-4xl text-hc-red">24H</p>
+          <p class="text-xs uppercase tracking-widest text-bone/50 mt-2">Prazo Médio*</p>
+        </div>
+        <div class="stat-card">
+          <p class="font-display text-4xl text-hc-blue">PC</p>
+          <p class="text-xs uppercase tracking-widest text-bone/50 mt-2">+ Console + Periféricos</p>
+        </div>
+        <div class="stat-card">
+          <p class="font-display text-4xl text-hc-red">USADOS</p>
+          <p class="text-xs uppercase tracking-widest text-bone/50 mt-2">Compra e Venda de Equipamentos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="gallery" class="relative border-t border-bone/10 py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
+        <h2 class="glitch font-display text-4xl md:text-5xl uppercase" data-text="Sinal Ao Vivo.">Sinal Ao Vivo.</h2>
+        <p class="font-display text-hc-blue tracking-[0.3em] text-xs uppercase">— 03 / Galeria —</p>
+      </div>
+
+      <div class="crt-shell mx-auto max-w-2xl">
+        <div class="crt-screen">
+          <div id="crtTrack" class="crt-track"><!-- slides injected by js/gallery.js --></div>
+          <div class="scanlines absolute inset-0 pointer-events-none z-20"></div>
+          <div class="crt-vignette absolute inset-0 pointer-events-none z-20"></div>
+        </div>
+
+        <div class="flex items-center justify-between mt-6">
+          <button id="crtPrev" type="button" aria-label="Canal anterior" class="crt-btn">&#10094;</button>
+          <div id="crtDots" class="flex flex-wrap justify-center gap-2"><!-- dots injected by js/gallery.js --></div>
+          <button id="crtNext" type="button" aria-label="Próximo canal" class="crt-btn">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="relative border-t border-bone/10 py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12">
+      <div>
+        <p class="font-display text-hc-red tracking-[0.3em] text-xs uppercase mb-4">— 04 / Contato —</p>
+        <h2 class="glitch font-display text-4xl md:text-5xl uppercase mb-6" data-text="Manda Pra Gente.">Manda Pra Gente.</h2>
+        <p class="text-bone/70 max-w-md mb-8">
+          Conta pra gente o que está de ruim no seu setup. A gente responde com diagnóstico e orçamento — sem achismo, sem venda casada.
+        </p>
+        <ul class="space-y-3 font-display uppercase text-sm tracking-widest">
+          <li class="flex items-center gap-3"><span class="text-hc-blue">WhatsApp</span> <span class="text-bone/60">(11) 99999-9999</span></li>
+          <li class="flex items-center gap-3"><span class="text-hc-blue">Horário</span> <span class="text-bone/60">Seg–Sáb, 10h–19h</span></li>
+        </ul>
+      </div>
+
+      <form id="contactForm" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-bone/50 mb-2">O Que Quebrou?</label>
+          <textarea name="message" rows="4" required class="hud-input" placeholder="Console, PC, controle..."></textarea>
+        </div>
+        <button type="submit" class="w-full px-6 py-3 bg-hc-red text-ink font-display uppercase tracking-widest text-sm hover:bg-bone transition-colors">
+          Enviar no WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-bone/10 bg-ink py-10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-2">
+      <img src="assets/logo1.png" alt="HC GAMES" class="h-8 w-auto" />
+      <span class="font-display text-sm tracking-wide">HC GAMES</span>
+    </div>
+    <p class="text-xs text-bone/40 uppercase tracking-widest">© 2026 HC Games — Suporte Técnico</p>
+  </div>
+</footer>
+
+<script src="js/gallery.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
