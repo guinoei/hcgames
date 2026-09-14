@@ -1,10 +1,10 @@
 // Gallery images — swap the `src` values for hosted URLs later, or add more entries.
 // Placeholder images are generated on the fly (placehold.co), no local files needed.
 const galleryImages = [
-  { src: 'https://placehold.co/800x600/0a0a0a/eeeadd?text=HC+GAMES', alt: 'Foto em breve 1' },
-  { src: 'https://placehold.co/800x600/0a0a0a/0047FF?text=HC+GAMES', alt: 'Foto em breve 2' },
-  { src: 'https://placehold.co/800x600/0a0a0a/FF1F3D?text=HC+GAMES', alt: 'Foto em breve 3' },
-  { src: 'https://placehold.co/800x600/111111/eeeadd?text=HC+GAMES', alt: 'Foto em breve 4' },
+  { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_1_a0kxaf.jpg', alt: 'Serviço 1' },
+  { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_2_kwjzz5.jpg', alt: 'Serviço 2' },
+  { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_3_vtouax.jpg', alt: 'Serviço 3' },
+  { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_4_cdewpg.jpg', alt: 'Serviço 4' },
 ];
 
 const AUTOPLAY_MS = 5000;
