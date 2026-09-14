@@ -11,7 +11,7 @@ mobileMenu?.querySelectorAll('a').forEach((link) => {
 });
 
 // Contact form — sends the message straight to WhatsApp
-const WHATSAPP_NUMBER = '5511999999999'; // placeholder, replace with real number
+const WHATSAPP_NUMBER = '5519997385515'; // placeholder, replace with real number
 
 const contactForm = document.getElementById('contactForm');
 
