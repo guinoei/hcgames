@@ -5,6 +5,9 @@ const galleryImages = [
   { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_2_kwjzz5.jpg', alt: 'Serviço 2' },
   { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_3_vtouax.jpg', alt: 'Serviço 3' },
   { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_4_cdewpg.jpg', alt: 'Serviço 4' },
+  { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_5_geqvts.jpg', alt: 'Serviço 5' },
+  { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_6_jhlqea.jpg', alt: 'Serviço 6' },
+  { src: 'https://res.cloudinary.com/dmcsf10tz/image/upload/v1789400216/hcgames/service_7_vrjqhi.jpg', alt: 'Serviço 7' },
 ];
 
 const AUTOPLAY_MS = 5000;
@@ -27,18 +30,26 @@ function renderGallery() {
     .join('');
 
   crtDots.innerHTML = galleryImages
-    .map((_, i) => `<button type="button" class="crt-dot" data-index="${i}">${String(i + 1).padStart(2, '0')}</button>`)
+    .map(
+      (img, i) => `
+      <button type="button" class="crt-thumb" data-index="${i}" aria-label="Ir para ${img.alt}">
+        <img src="${img.src}" alt="" loading="lazy" />
+        <span class="crt-thumb-ch">${String(i + 1).padStart(2, '0')}</span>
+      </button>
+    `
+    )
     .join('');
 
-  crtDots.querySelectorAll('.crt-dot').forEach((dot) => {
-    dot.addEventListener('click', () => goToSlide(Number(dot.dataset.index)));
+  crtDots.querySelectorAll('.crt-thumb').forEach((thumb) => {
+    thumb.addEventListener('click', () => goToSlide(Number(thumb.dataset.index)));
   });
 }
 
 function updateGallery() {
   crtTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-  crtDots.querySelectorAll('.crt-dot').forEach((dot, i) => {
-    dot.classList.toggle('active', i === currentSlide);
+  crtDots.querySelectorAll('.crt-thumb').forEach((thumb, i) => {
+    thumb.classList.toggle('active', i === currentSlide);
+    thumb.setAttribute('aria-current', i === currentSlide ? 'true' : 'false');
   });
 }
 
